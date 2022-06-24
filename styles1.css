@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.page-title {
+    color: #FF6D00;
+    font-family: "Apple Chancery, cursive";
+    font-weight: normal;
+    text-align: center;
+    font-size: 4em;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(#9D5900, #3D2200);
+}
+
+.home, .exit {
+    text-indent: 20px; 
+	float: right;
+    font-size: 1.5em;
+    color: violet;
+}
+
+.inscription  {
+    color: rgb(10, 245, 108);
+    font-size: 1.6em;
+    border: 2px solid rgb(221, 148, 148);
+}
+
+.inscription2 {
+    color: rgb(10, 245, 108);
+    font-size: 1.6em;
+    float:  right;
+    margin-top: -4.2cm;
+    border: 2px solid rgb(221, 148, 148);
+}
+
+.account-existe {
+    color: violet;
+    font-weight: bold;
+    text-decoration: underline;
+	text-underline-position: under;
+}
+
+.new-player {
+    color: violet;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-align: right;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.ins {
+    font-size: 2em;
+	color: violet;
+	font-style: italic;
+}
+
+.connect {
+    background-color: rgb(10, 245, 108);
+    font-size: large;
+}
+
+.error {
+    color: violet;
+    font-size: xx-large;
+    text-align: center;
+    font-style: italic;
+}
+
+.level {
+    font-size: 2.3em;
+	color: violet;
+	font-style: italic;
+}
+
+.game-cont {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(144, 211, 149);
+    font-size: xx-large;
+}
+
+.game-time {
+    margin-left: 12.5em;
+    border: 3px solid violet;
+}
+
+.game-flips {
+    margin-right: 12.5em;
+    border: 3px solid violet;
+}
+
+.game-score {
+    border: 3px solid violet;
+}
+
+.start1 {
+    color: violet;
+    background-color: rgb(191, 202, 250);
+    font-size: x-large;
+    text-indent: 30px;
+    margin-left: 19em;
+}
+
+.start2 {
+    color: violet;
+    background-color: rgb(191, 202, 250);
+    font-size: x-large;
+    text-indent: 30px;
+}
+
+.start3 {
+    color: violet;
+    background-color: rgb(191, 202, 250);
+    font-size: x-large;
+    text-indent: 30px;
+}
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    background: deepskyblue;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
